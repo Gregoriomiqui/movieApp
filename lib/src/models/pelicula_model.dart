@@ -27,7 +27,7 @@ class Pelicula {
   double? popularity;
   String? posterPath;
   String? releaseDate;
-  String? title;
+  String title = "";
   bool? video;
   double? voteAverage;
   int? voteCount;
@@ -43,7 +43,7 @@ class Pelicula {
     this.popularity,
     this.posterPath,
     this.releaseDate,
-    this.title,
+    required this.title,
     this.video,
     this.voteAverage,
     this.voteCount,
@@ -64,6 +64,14 @@ class Pelicula {
     video            = json['video'];
     voteAverage      = json['vote_average'] / 1;
     voteCount        = json['vote_count'];
+  }
+
+  getPosterImg(){
+    if ( posterPath == null){
+      return 'http://www.redcomingenieria.cl/images/no-imagen.jpg';
+    }else{
+      return 'https://image.tmdb.org/t/p/w500/$posterPath';
+    }
   }
 
 }
