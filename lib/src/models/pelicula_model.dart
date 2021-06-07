@@ -22,7 +22,7 @@ class Pelicula {
   List<int>? genreIds;
   int id = 0;
   String? originalLanguage;
-  String? originalTitle;
+  String originalTitle = "";
   String? overview;
   double? popularity;
   String? posterPath;
@@ -38,7 +38,7 @@ class Pelicula {
     this.genreIds,
     required this.id,
     this.originalLanguage,
-    this.originalTitle,
+    required this.originalTitle,
     this.overview,
     this.popularity,
     this.posterPath,
