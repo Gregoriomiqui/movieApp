@@ -74,6 +74,14 @@ class Pelicula {
     }
   }
 
+   getBackgroundImg(){
+    if ( posterPath == null){
+      return 'http://www.redcomingenieria.cl/images/no-imagen.jpg';
+    }else{
+      return 'https://image.tmdb.org/t/p/w500/$backdropPath';
+    }
+  }
+
 }
 
 
